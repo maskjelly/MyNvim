@@ -12,14 +12,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  change_detection = { enabled = true, notify = true },
+  change_detection = { enabled = false, notify = true },
   spec = {
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { "olimorris/onedarkpro.nvim" }, -- add onedarkpro here
     { import = "plugins" },
   },
   defaults = {
-    lazy = false,
-    version = false, 
+    lazy = true,
+    version = false,
   },
   checker = { enabled = true },
   performance = {
